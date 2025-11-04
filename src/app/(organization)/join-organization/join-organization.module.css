@@ -1,0 +1,12 @@
+.apply-btn {
+    background: #19A463;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 14px 30px;
+    transition: .3s ease-in-out;
+    font-family: var(--font-gordita), sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}

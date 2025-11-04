@@ -1,0 +1,65 @@
+/* ---------- Layout ---------- */
+.theme-main-menu {
+    position: relative;
+    width: 100%;
+    z-index: 99;
+}
+
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    font-weight: 500 !important;
+}
+
+/* ---------- Navbar Links ---------- */
+.nav-link {
+    color: #505050;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    font-size: 18px;
+    font-family: var(--font-gordita), sans-serif;
+    font-weight: 500 !important;
+}
+
+/* ---------- Hover & Active States ---------- */
+.nav-link:hover,
+.nav-link:focus {
+    color: rgb(25, 164, 99);
+    font-weight: 500 !important;
+}
+
+/* ✅ Custom active class from Next.js logic */
+.active {
+    color: rgb(25, 164, 99) !important;
+    font-weight: 500 !important;
+}
+
+/* ---------- Dropdown Menu ---------- */
+.dropdown-menu {
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    font-weight: 500 !important;
+}
+
+.custom-btn {
+    background: rgba(25 164 99 / 100%);
+    border-radius: 5px;
+    color: #ffffff !important;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--font-gordita), sans-serif;
+    font-weight: 500 !important;
+    line-height: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    color: #ffffff !important;
+    background: rgba(28 116 75 / 100%);
+}
