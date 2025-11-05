@@ -138,7 +138,7 @@ h6.heading-6 {
 
  ***/
 .khoj-preloader {
- 
+
   align-items: center;
   -webkit-align-items: center;
   display: flex;
@@ -164,7 +164,7 @@ h6.heading-6 {
 
 .animation-preloader h1 {
   color: #000000;
- 
+
   font-style: normal;
   font-weight: 900;
   font-size: 66px;
@@ -299,7 +299,7 @@ h6.heading-6 {
 }
 
 .theme-main-menu .navbar {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -310,9 +310,9 @@ h6.heading-6 {
   margin-left: 140px;
 }
 
-.navbar-nav .nav-item {
+/* .navbar-nav .nav-item {
   padding-right: 40px;
-}
+} */
 
 .right-wiget .sign-up .custom-btn {
   background: rgba(25 164 99 / 100%);
@@ -320,7 +320,7 @@ h6.heading-6 {
   color: #ffffff;
   padding: 10px 30px;
   text-align: center;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -346,14 +346,14 @@ h6.heading-6 {
 
 /*banner css start*/
 .banner-one {
-  /* background:rgba(25, 164, 99, .05) url("../images/bg/bg-1.png") left top no-repeat; */
+  background: rgba(25, 164, 99, .05) url("/images/bg/bg-1.png") left top no-repeat;
   height: auto;
   width: 100%;
   position: relative;
 }
 
 .banner-one .hero-heading {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 70px;
@@ -369,7 +369,7 @@ h6.heading-6 {
   position: relative;
   background: #ffffff;
   height: 70px;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -408,7 +408,7 @@ h6.heading-6 {
   width: 100%;
   outline: none;
   border: none;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -421,7 +421,7 @@ h6.heading-6 {
 }
 
 .banner-one form .item_3 span {
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -450,7 +450,7 @@ h6.heading-6 {
   width: 100%;
   outline: none;
   border: none;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -525,7 +525,7 @@ h6.heading-6 {
 }
 
 .heading {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -690,7 +690,7 @@ category
 }
 
 .left-about-one::after {
-  /* content:url("/images/assets/Group12.png"); */
+  content: url("/images/assets/Group12.png");
   position: absolute;
   right: 31px;
   bottom: 152px;
@@ -734,7 +734,7 @@ category
 }
 
 .right-about::after {
-  /* content: url("/images/assets/Group12.png"); */
+  content: url("/images/assets/Group12.png");
   position: absolute;
   right: 54px;
   bottom: 44px;
@@ -744,7 +744,7 @@ category
 }
 
 .right-about .heading-2 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -754,7 +754,7 @@ category
 }
 
 .right-about p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -767,7 +767,7 @@ category
   background: #19A463;
   border-radius: 5px;
   color: #ffffff;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -787,7 +787,7 @@ category
 .feature-job
 ==============================*/
 .feature-job-title .heading-2 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -804,7 +804,7 @@ category
   height: auto;
   padding: 40px;
   background: #FFFFFF;
-  box-shadow: 5px 15px 30px rgb(0 0 0 / 5%);
+  box-shadow: 5px 0px 30px #0000000d;
   border-radius: 10px;
   border: none;
   transition: all 0.3s ease-in-out;
@@ -831,7 +831,7 @@ category
 }
 
 .company-name span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -860,7 +860,7 @@ category
 }
 
 .job-title h3 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -870,7 +870,7 @@ category
 }
 
 .job-type span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -891,7 +891,7 @@ category
 }
 
 .job-sallary span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -900,7 +900,7 @@ category
 }
 
 .job-sallary span strong {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -911,7 +911,7 @@ category
 .job-sallary a {
   background: rgba(25, 164, 99, .1);
   border-radius: 5px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -919,6 +919,7 @@ category
   color: #19A463;
   transition: all 0.3s ease-in-out;
   padding: 16px 30px;
+  text-decoration: none;
 }
 
 .job-sallary a:hover {
@@ -934,16 +935,16 @@ category
 }
 
 .explore-btn .btn-custom {
- 
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 30px;
   color: #FFFFFF;
   background: #19A463;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   padding: 12px 30px;
+  text-decoration: none;
 }
 
 .explore-btn .btn-custom:hover {
@@ -981,7 +982,7 @@ category
 }
 
 .choose-us-heading .span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -991,7 +992,7 @@ category
 }
 
 .choose-us-heading h2 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -1004,7 +1005,7 @@ category
 }
 
 .choose-us-heading p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1041,7 +1042,7 @@ category
 }
 
 .choose-us-heading ul li a {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1058,7 +1059,7 @@ category
   background: #19A463;
   border-radius: 5px;
   color: #ffffff;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -1142,20 +1143,20 @@ testimonial start
 ===============================*/
 .testimonial-rapper {
   position: relative;
-  /* background: url("../images/bg/bg-2.png") left top no-repeat; */
+  background: url("/images/bg/bg-2.png") left top no-repeat;
   height: auto;
   background-size: 71% 100%;
 }
 
 .testimonial-content {
   position: relative;
-  /* background: url('../images/banner/banner-4.jpg') left top no-repeat; */
+  background: url('/images/banner/banner-4.jpg') left top no-repeat;
   height: 600px;
   background-position: -10% 100%;
 }
 
 .testimonial-rapper .heding-center h2 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -1228,7 +1229,7 @@ testimonial start
 }
 
 .testimonial-item-inner .name {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -1238,7 +1239,7 @@ testimonial start
 }
 
 .testimonial-item-inner .designation {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1247,7 +1248,7 @@ testimonial start
 }
 
 .testimonial-item-inner .rating {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1265,7 +1266,7 @@ testimonial start
 }
 
 .testimonial-item-inner .details p {
-  font-family: 'Gordita';
+  
   font-size: 16px;
   line-height: 32px;
   color: #505050;
@@ -1281,7 +1282,7 @@ testimonial end
 Download Apps
 =================*/
 .apps_content-left h2 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -1290,7 +1291,7 @@ Download Apps
 }
 
 .apps_content-left p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1347,7 +1348,7 @@ Download Apps
 Download Apps
 =================*/
 .Customer-one {
-  /* background:rgba(25, 164, 99, .05) url('../images/bg/bg-2.png')no-repeat; */
+  background: rgba(25, 164, 99, .05) url('/images/bg/bg-2.png')no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -1379,7 +1380,7 @@ Download Apps
 }
 
 .customer_content h2 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -1391,7 +1392,7 @@ Download Apps
 }
 
 .customer_content p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1404,12 +1405,13 @@ Download Apps
   background: #19A463;
   border-radius: 5px;
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 30px;
   color: #FFFFFF;
   transition: all 0.3s ease-in-out;
   padding: 12px 30px;
+  text-decoration: none;
 }
 
 .customer_content .custom-btn:hover {
@@ -1424,7 +1426,7 @@ SUBSCRIBE
 }
 
 .subscriber-content-left h2 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -1447,7 +1449,7 @@ SUBSCRIBE
 }
 
 .subscriber-content-right form input {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -1465,7 +1467,7 @@ SUBSCRIBE
   border-radius: 50px;
   color: #FFFFFF;
   box-shadow: 0px 2px 8px rgb(25 164 99 / 50%);
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1482,7 +1484,7 @@ SUBSCRIBE
 footer
 =================*/
 .footer-one_1 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1518,7 +1520,7 @@ footer
 }
 
 .footer-one_2 h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -1532,7 +1534,7 @@ footer
 }
 
 .footer-one_2 ul li a {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1547,7 +1549,7 @@ footer
 }
 
 .copy-right h5 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1563,7 +1565,7 @@ footer
 
 /* home page 2 banner  */
 .banner-two {
-  /* background:rgba(25, 164, 99, .05) url("../images/bg/bg-5.png") center center no-repeat; */
+  background: rgba(25, 164, 99, .05) url("/images/bg/bg-5.png") center center no-repeat;
   height: auto;
   max-width: 100%;
   position: relative;
@@ -1575,7 +1577,7 @@ footer
 }
 
 .banner-two-rapper p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -1588,7 +1590,7 @@ footer
   background: #ffffff;
   max-width: 540px;
   height: 70px;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1635,7 +1637,7 @@ footer
   color: #ffffff;
   text-align: center;
   border-radius: 30px;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1696,7 +1698,7 @@ Get Your Dream Job*/
 }
 
 .dream-job2 .text-center .top-heading {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1705,7 +1707,7 @@ Get Your Dream Job*/
 }
 
 .dream-job2 .text-center .heading-text3 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -1851,7 +1853,7 @@ Get Your Dream Job*/
 }
 
 .about-us-rapper .right-about-two .small {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1861,7 +1863,7 @@ Get Your Dream Job*/
 
 .about-us-rapper .right-about-two h2.heading-2>.big {
   color: #19A463;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -1870,7 +1872,7 @@ Get Your Dream Job*/
 .about-us-rapper .right-about-two p:nth-child(3) {
   max-width: 424px;
   position: relative;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1892,7 +1894,7 @@ Get Your Dream Job*/
 
 .about-us-rapper .right-about-two p:nth-child(4) {
   max-width: 462px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1909,7 +1911,7 @@ Get Your Dream Job*/
   justify-content: center;
   align-items: center;
   color: #FFFFFF;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -1924,7 +1926,7 @@ Get Your Dream Job*/
 
 /*==========================================about two end*/
 .theme-two-category {
-  /* background: rgba(25, 164, 99, .05) url("../images/bg/bg-3.png") center center no-repeat; */
+  background: rgba(25, 164, 99, .05) url("/images/bg/bg-3.png") center center no-repeat;
 }
 
 .theme-two-category .ctg-1 .c1,
@@ -1992,7 +1994,7 @@ Get Your Dream Job*/
 
 /*why-choose-us*/
 .why-choose-us2 {
-  /* background:rgba(25, 164, 99, .05) url("../images/bg/bg-3.png") center center no-repeat; */
+  background: rgba(25, 164, 99, .05) url("/images/bg/bg-3.png") center center no-repeat;
 }
 
 .why-choose-us2 .shape-9 {
@@ -2021,7 +2023,7 @@ Get Your Dream Job*/
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -2031,7 +2033,7 @@ Get Your Dream Job*/
 }
 
 .left-choose-content .accordion-button {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 1.3rem;
@@ -2088,7 +2090,7 @@ Get Your Dream Job*/
 .left-choose-content .accordion-body {
   padding: 15px 1.25rem 0 1.25rem;
   max-width: 465px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2188,7 +2190,7 @@ Get Your Dream Job*/
 }
 
 .testimonial-item-inner-two .right-side::after {
-  /* content:url("../images/icon/commmas.png"); */
+  content: url("/images/icon/commmas.png");
   font-family: bootstrap-icons !important;
   position: absolute;
   right: 4%;
@@ -2222,7 +2224,7 @@ Get Your Dream Job*/
 }
 
 .testimonial-item-inner-two .right-side .name {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -2231,7 +2233,7 @@ Get Your Dream Job*/
 }
 
 .testimonial-item-inner-two .right-side .designtion {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2278,7 +2280,7 @@ Get Your Dream Job*/
 }
 
 .apps-download-two {
-  /* background:rgba(25, 164, 99, .05) url("../images/bg/bg-3.png") right bottom no-repeat; */
+  background: rgba(25, 164, 99, .05) url("/images/bg/bg-3.png") right bottom no-repeat;
   height: auto;
   width: 100%;
   position: relative;
@@ -2286,7 +2288,7 @@ Get Your Dream Job*/
 
 /*Home page 3 css from here*/
 .banner-three-rapper {
-  /* background:url("../images/bg/bg-6.png") center center no-repeat; */
+  background: url("/images/bg/bg-6.png") center center no-repeat;
   height: auto;
   width: 100%;
   position: relative;
@@ -2294,7 +2296,7 @@ Get Your Dream Job*/
 }
 
 .banner-three-rapper h1 {
- 
+
   font-style: normal;
   font-weight: 700;
   font-size: 66px;
@@ -2306,7 +2308,7 @@ Get Your Dream Job*/
 
 .banner-three-rapper p {
   max-width: 591px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -2319,7 +2321,7 @@ Get Your Dream Job*/
   width: 100%;
   max-width: 740px;
   max-height: 70px;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -2351,7 +2353,7 @@ Get Your Dream Job*/
   width: 100%;
   outline: none;
   border: none;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -2385,7 +2387,7 @@ Get Your Dream Job*/
 .banner-three-rapper .form-3 .button a {
   background: #19A463;
   color: #ffffff;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -2403,7 +2405,10 @@ Get Your Dream Job*/
   opacity: .5;
 }
 
-/* .theme-three-category{background: rgba(25, 164, 99, 0.05) url('../images/bg/bg-3.png') left top no-repeat;} */
+.theme-three-category {
+  background: rgba(25, 164, 99, 0.05) url('/images/bg/bg-3.png') left top no-repeat;
+}
+
 .theme-three-category .job-ctg1 img,
 .theme-three-category .job-ctg2 img,
 .theme-three-category .job-ctg3 img,
@@ -2502,7 +2507,7 @@ Get Your Dream Job*/
 }
 
 .staticties .statistics-1 .top {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 72px;
@@ -2512,7 +2517,7 @@ Get Your Dream Job*/
 
 .staticties .statistics-1 .bottom {
   padding-top: 20px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2536,7 +2541,7 @@ Get Your Dream Job*/
 
 .why-choose-us-three .choose-us-heading ul li a {
   padding-bottom: 20px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -2589,7 +2594,7 @@ Get Your Dream Job*/
 }
 
 .join-Company .right-side .item2 h3 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -2598,7 +2603,7 @@ Get Your Dream Job*/
 }
 
 .join-Company .right-side .item3 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2609,7 +2614,7 @@ Get Your Dream Job*/
 .join-Company .right-side .item4 a {
   width: 158px;
   height: 54px;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -2630,7 +2635,7 @@ Get Your Dream Job*/
 
 /*testimonial-content-Three*/
 .testimonial-three {
-  /* background:rgba(25, 164, 99, 0.05) url("../images/bg/bg-3.png") left top no-repeat; */
+  background: rgba(25, 164, 99, 0.05) url("/images/bg/bg-3.png") left top no-repeat;
 }
 
 .testimonial-slider-Three .item-rapper {
@@ -2654,7 +2659,7 @@ Get Your Dream Job*/
 }
 
 .testimonial-slider-Three .item-rapper .item3 .right-side h5 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -2663,7 +2668,7 @@ Get Your Dream Job*/
 }
 
 .testimonial-slider-Three .item-rapper .item3 .right-side span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2776,7 +2781,7 @@ Get Your Dream Job*/
 }
 
 .home-blog-three .blog-heading .top span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -2786,7 +2791,7 @@ Get Your Dream Job*/
 }
 
 .home-blog-three .blog-heading h3 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -2804,7 +2809,7 @@ Get Your Dream Job*/
 }
 
 .blog-main-content .card-body .blog-item1 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -2822,7 +2827,7 @@ Get Your Dream Job*/
 }
 
 .blog-main-content .card-body h6 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -2929,7 +2934,7 @@ Get Your Dream Job*/
   width: 100%;
   max-width: 740px;
   max-height: 70px;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -3039,7 +3044,7 @@ Get Your Dream Job*/
 
 /* our video  */
 .our_video_rapper .video-top span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3047,7 +3052,7 @@ Get Your Dream Job*/
 }
 
 .our_video_rapper .video-top h5 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -3084,11 +3089,11 @@ Get Your Dream Job*/
 
 /*Our Creative Team*/
 .our_team {
-  /* background: rgba(25, 164, 99, 0.05) url(../images/bg/bg-3.png) left top no-repeat; */
+  background: rgba(25, 164, 99, 0.05) url(/images/bg/bg-3.png) left top no-repeat;
 }
 
 .our_team .team-heading span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3097,7 +3102,7 @@ Get Your Dream Job*/
 }
 
 .our_team .team-heading h3 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -3161,7 +3166,7 @@ Get Your Dream Job*/
 }
 
 .our_team_item .card-body h5 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -3170,7 +3175,7 @@ Get Your Dream Job*/
 }
 
 .our_team_item .card-body span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3220,7 +3225,7 @@ Get Your Dream Job*/
 
 /*job grid page*/
 .job-grid-heading .left-grid span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3230,7 +3235,7 @@ Get Your Dream Job*/
 
 .job-grid-heading .right-grid span {
   padding-right: 10px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3242,7 +3247,7 @@ Get Your Dream Job*/
   width: 60%;
   max-height: 50px;
   border-radius: 5px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3257,7 +3262,7 @@ Get Your Dream Job*/
 
 .job-grid-heading .right-grid .form-select option {
   padding-top: 15px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3275,7 +3280,7 @@ Get Your Dream Job*/
 }
 
 .feature-job-list-rapper .left-list .job-type span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3284,7 +3289,7 @@ Get Your Dream Job*/
 }
 
 .left-list .job-select .form-select option {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3311,7 +3316,7 @@ Get Your Dream Job*/
 }
 
 .left-list .job-range strong {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3321,7 +3326,7 @@ Get Your Dream Job*/
 
 .left-list .experience strong {
   padding-bottom: 25px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3334,7 +3339,7 @@ Get Your Dream Job*/
 }
 
 .left-list .experience .left-side .form-check .form-check-label {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3351,7 +3356,7 @@ Get Your Dream Job*/
 }
 
 .left-list .experience .right-side span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3365,7 +3370,7 @@ Get Your Dream Job*/
 }
 
 .right-job-list .job-list-heading strong {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3383,7 +3388,7 @@ Get Your Dream Job*/
 }
 
 .right-job-list .job-list-heading .sort-list .form-select option {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3408,7 +3413,7 @@ Get Your Dream Job*/
 }
 
 .right-job-list .job-list-1 .list-company span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3422,7 +3427,7 @@ Get Your Dream Job*/
 }
 
 .right-job-list .job-list-1 .job-list-name h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -3432,7 +3437,7 @@ Get Your Dream Job*/
 
 .right-job-list .job-list-1 .job-list-name span {
   padding-right: 20px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -3447,7 +3452,7 @@ Get Your Dream Job*/
 .right-job-list .job-list-1 .job-list-name .job-apply a {
   background: rgba(25, 164, 99, 0.1);
   border-radius: 5px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -3474,7 +3479,7 @@ Get Your Dream Job*/
   justify-content: center;
   align-items: center;
   border-radius: 5px;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3490,7 +3495,7 @@ Get Your Dream Job*/
 
 /*blog-grid page*/
 .blog-grid .explore a {
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3581,7 +3586,7 @@ Get Your Dream Job*/
 }
 
 .bottom-touch span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3591,7 +3596,7 @@ Get Your Dream Job*/
 
 /*====================contact-form===================*/
 .contact-form .form-label {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3601,7 +3606,7 @@ Get Your Dream Job*/
 }
 
 .contact-form .form-control {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3622,7 +3627,7 @@ button.custom-btn {
   background: #19A463;
   border-radius: 5px;
   transition: .3s ease-in-out;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3636,7 +3641,7 @@ button.custom-btn:hover {
 }
 
 .contact-form a.custom-btn button {
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3660,7 +3665,7 @@ button.custom-btn:hover {
 }
 
 .job-details-left .left-1 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -3669,7 +3674,7 @@ button.custom-btn:hover {
 }
 
 .job-details-left .left-1 strong {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -3678,7 +3683,7 @@ button.custom-btn:hover {
 }
 
 .job-details-left .left-1 span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3687,7 +3692,7 @@ button.custom-btn:hover {
 }
 
 .job-details-left .left-2 a {
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3716,7 +3721,7 @@ button.custom-btn:hover {
 
 .job-details-right .job-list-1 span {
   padding-right: 10px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -3725,7 +3730,7 @@ button.custom-btn:hover {
 }
 
 .job-details-right .job-list-1 .list-company span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3734,7 +3739,7 @@ button.custom-btn:hover {
 }
 
 .job-details-right .job-list-1 .list-company span small {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3743,7 +3748,7 @@ button.custom-btn:hover {
 }
 
 .job-details-right .job-list-1 h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -3768,7 +3773,7 @@ button.custom-btn:hover {
   align-items: center;
   justify-content: center;
   color: #19A463;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -3782,7 +3787,7 @@ button.custom-btn:hover {
 }
 
 .job-details-right .job-list-details h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3793,7 +3798,7 @@ button.custom-btn:hover {
 
 .job-details-right .job-list-details p {
   padding: 25px 0 0 0;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -3807,7 +3812,7 @@ button.custom-btn:hover {
 }
 
 .job-details-right .job-list-details ul li {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -3822,7 +3827,7 @@ button.custom-btn:hover {
   margin: 10px 10px;
   border: none;
   padding: 15px 30px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3838,7 +3843,7 @@ button.custom-btn:hover {
 .job-details-right .job-list-details .apply-btn {
   background: #19A463;
   border-radius: 5px;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3854,7 +3859,7 @@ button.custom-btn:hover {
 }
 
 .job-details-right .job-list-details .social-link span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -3966,7 +3971,7 @@ button.custom-btn:hover {
 }
 
 .Candidates-grid .top-grid-1 h3 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -3976,7 +3981,7 @@ button.custom-btn:hover {
 }
 
 .Candidates-grid .top-grid-1 span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3985,7 +3990,7 @@ button.custom-btn:hover {
 }
 
 .Candidates-grid .top-grid-1 strong {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4000,7 +4005,7 @@ button.custom-btn:hover {
 
 .Candidates-grid .top-grid-2 span,
 .Candidates-grid .top-grid-3 span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4016,7 +4021,7 @@ button.custom-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -4039,7 +4044,7 @@ button.custom-btn:hover {
 }
 
 .Candidate-list .Candidate-list-1 .Candidate-name h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4049,7 +4054,7 @@ button.custom-btn:hover {
 
 .Candidate-list .Candidate-list-1 .Candidate-name span {
   padding-top: 10px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4064,7 +4069,7 @@ button.custom-btn:hover {
 }
 
 .Candidate-list .Candidate-list-1 .Candidate-name span strong {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4074,7 +4079,7 @@ button.custom-btn:hover {
 }
 
 .Candidate-list .Candidate-list-1 .Candidate-place span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4086,7 +4091,7 @@ button.custom-btn:hover {
 .Candidate-list .Candidate-list-1 .Candidate-contact a {
   background: rgba(25, 164, 99, 0.1);
   border-radius: 5px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -4122,7 +4127,7 @@ button.custom-btn:hover {
   background: #FFFFFF;
   border: 1px solid #19A463;
   border-radius: 5px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4132,7 +4137,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-left .Profile-name h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -4141,7 +4146,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-left .Profile-name small {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4152,7 +4157,7 @@ button.custom-btn:hover {
 
 .candidates-details-left .social-link ul {
   list-style: none;
-  padding: 30px 0;
+  padding: 0 0 30px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -4164,12 +4169,16 @@ button.custom-btn:hover {
   display: inline-block;
   color: #19A463;
   width: 40px;
+  height: 40px;
   background: rgba(25, 164, 99, 0.1);
   text-align: center;
   margin: 0 3px;
   border-radius: 50px;
   line-height: 40px;
   transition: .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .candidates-details-left .social-link ul li a:hover {
@@ -4178,7 +4187,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-left .left-1 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4187,10 +4196,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-left .left-1 span {
-  font-family: 'Gordita';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
+  font-size: 24px !important;
   line-height: 26px;
   color: #111D3B;
 }
@@ -4208,11 +4214,11 @@ button.custom-btn:hover {
   background: #FFFFFF;
   box-shadow: 5px 15px 30px rgb(0 0 0 / 5%);
   border-radius: 10px;
-  padding: 40px;
+  padding: 30px;
 }
 
 .candidates-details-right .Candidate-name h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4221,7 +4227,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .Candidate-name span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4235,7 +4241,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .Candidate-name span strong {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4244,7 +4250,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .candidate-place span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4259,7 +4265,7 @@ button.custom-btn:hover {
 .candidates-details-right .Candidate-contact a {
   background: rgba(25, 164, 99, 0.1);
   border-radius: 5px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -4275,7 +4281,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .candidate-list-2 h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4284,17 +4290,17 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .candidate-list-2 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 34px;
+  line-height: 25px;
   color: #505050;
   text-align: justify;
 }
 
 .candidates-details-right .candidate-list-3 h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4335,7 +4341,7 @@ button.custom-btn:hover {
 }
 
 .timeline .event h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4344,7 +4350,7 @@ button.custom-btn:hover {
 }
 
 .timeline .event span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4353,7 +4359,7 @@ button.custom-btn:hover {
 }
 
 .timeline .event p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4366,7 +4372,7 @@ button.custom-btn:hover {
   content: attr(data-date);
   min-width: 120px;
   position: absolute;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4392,7 +4398,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .candidate-list-5 h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4401,7 +4407,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .candidate-list-5 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4410,7 +4416,7 @@ button.custom-btn:hover {
 }
 
 .candidates-details-right .candidate-list-5 .btn {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4438,14 +4444,14 @@ button.custom-btn:hover {
 .candidates-details-right .candidate-list-6 a {
   background: rgba(25, 164, 99, 1);
   border-radius: 5px;
- 
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 30px;
   color: #FFFFFF;
   padding: 12px 30px;
   transition: .3s ease-in-out;
+  text-decoration: none;
 }
 
 .candidates-details-right .candidate-list-6 a:hover {
@@ -4455,7 +4461,7 @@ button.custom-btn:hover {
 
 /*blog single css*/
 .single-blog-left .left-1 span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4469,7 +4475,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .left-1 h3 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -4483,7 +4489,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .left-1 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4495,7 +4501,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .left-2 p {
-  font-family: 'Gordita';
+  
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
@@ -4507,7 +4513,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .left-1 h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -4556,7 +4562,7 @@ button.custom-btn:hover {
   height: 54px;
   background: #19A463;
   border-radius: 5px;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -4586,7 +4592,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .left-6 .comments-1 h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -4595,7 +4601,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .left-6 .comments-1 p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4604,7 +4610,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .left-6 .comments-1 span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4618,7 +4624,7 @@ button.custom-btn:hover {
   background: rgba(25, 164, 99, 0.1);
   border-radius: 5px;
   color: #19A463;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -4626,7 +4632,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .make-comment h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -4635,7 +4641,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-left .make-comment .form-label {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4645,7 +4651,7 @@ button.custom-btn:hover {
 
 .single-blog-left .make-comment .form-control {
   padding: 20px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -4658,7 +4664,7 @@ button.custom-btn:hover {
   height: 54px;
   background: #19A463;
   border-radius: 5px;
- 
+
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -4708,7 +4714,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .profile-name h4 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -4717,7 +4723,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .profile-name span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4726,7 +4732,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .profile-name p {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4765,7 +4771,7 @@ button.custom-btn:hover {
   border: none;
   max-width: 360px;
   padding: 15px 25px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4780,7 +4786,7 @@ button.custom-btn:hover {
   background: #19A463;
   border-radius: 5px;
   margin-top: 20px;
- 
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -4795,7 +4801,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .right-2 h5 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4812,7 +4818,7 @@ button.custom-btn:hover {
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 20px 25px;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4821,7 +4827,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .right-2 ul li span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4830,7 +4836,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .right-3 span {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4839,7 +4845,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .right-3 h6 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4848,7 +4854,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .right-4 h5 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4881,7 +4887,7 @@ button.custom-btn:hover {
 }
 
 .single-blog-right .right-5 h5 {
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -4896,7 +4902,7 @@ button.custom-btn:hover {
   background: rgba(17, 29, 59, 0.03);
   border-radius: 5px;
   border: none;
-  font-family: 'Gordita';
+  
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

@@ -1,0 +1,17 @@
+.Candidate-contact {
+    background: rgba(25, 164, 99, 0.1);
+    border-radius: 5px;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #19A463 !important;
+    line-height: 23px;
+    padding: 16px 36px !important;
+    transition: .3s ease-in-out;
+}
+
+.Candidate-contact:hover {
+    background: #19A463;
+    color: #fff !important;
+}
