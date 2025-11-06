@@ -49,7 +49,7 @@ const Services = () => {
                     <div className="row job-grid-heading d-flex align-items-center pb-10" >
                         <div className="col-lg-8 md-pb-20" >
                             <div className="left-grid" >
-                                <span className="">My services</span>
+                                <span className="">My services:</span>
                             </div>
                         </div>
                         {/* <div className="col-lg-4" >

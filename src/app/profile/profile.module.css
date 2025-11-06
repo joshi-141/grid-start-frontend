@@ -1,7 +1,7 @@
 .Candidate-contact {
     background: rgba(25, 164, 99, 0.1);
     border-radius: 5px;
-    
+
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -13,5 +13,25 @@
 
 .Candidate-contact:hover {
     background: #19A463;
+    color: #fff !important;
+}
+
+
+.profile_edit {
+    position: absolute;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 2px solid #19a463;
+    color: #19a463 !important;
+    padding: 0 !important;
+}
+
+.profile_edit:hover {
+    background: #19a463;
     color: #fff !important;
 }

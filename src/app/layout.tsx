@@ -8,6 +8,8 @@ import "./globals.css";
 
 // Components
 import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/Footer";
+
 
 // 🎨 Custom Font: Gordita
 const gordita = localFont({
@@ -37,6 +39,7 @@ export default function RootLayout({
         <div className="flex flex-col h-screen">
           <Header className="h-[140px] fixed w-full" />
           <main className="pt-[160px]">{children}</main>
+          <Footer />
         </div>
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
