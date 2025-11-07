@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { RiBookmark2Line } from "react-icons/ri";
 import Link from "next/link";
@@ -14,40 +14,47 @@ import ModalCustom from "@/components/ui/modal";
 import RenderModalContent from "./renderModalContent";
 import styles from "./profile.module.css";
 
-const Profile = () => {
-    // 🔹 Control modal open/close
-    const [open, setOpen] = useState(false);
 
-    // 🔹 Track which section is being edited
+interface UserFormData {
+  id: number;
+  name: string;
+  role: string;
+  about: string;
+  skills: string[];
+  experience: { title: string; company: string; period: string; description?: string }[];
+  email?: string;
+  phone?: string;
+  country?: string;
+}
+
+const Profile = () => {
+    const [user, setUser] = useState<UserFormData>();
+    const [formData, setFormData] = useState<UserFormData>();
+    const [open, setOpen] = useState(false);
     const [modalSection, setModalSection] = useState<string | null>(null);
 
-    // 🔹 Example user data (could come from API)
-    const [user, setUser] = useState({
-        name: "Rahul Joshi",
-        role: "Developer",
-        about:
-            "Dramatically envisioneer interactive leadership through functionalized ROI. Professionally simplify synergistic initiatives.",
-        skills: [
-            "UI/UX Design",
-            "Graphic Design",
-            "Product Design",
-            "HTML",
-            "Development",
-            "WordPress",
-            "Back-End",
-            "Front-End",
-        ],
-        experience: [
-            { title: "Sr. UX/UI Designer", company: "Netforth Software", years: "2 Years" },
-        ],
-    });
-
-    // 🔹 Open modal and track which section is clicked
     const handleEdit = (section: string) => {
         setModalSection(section);
         setOpen(true);
     };
 
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => (prev ? { ...prev, [name]: value } : { [name]: value } as any));
+    };
+
+    useEffect(() => {
+        fetch("http://localhost:5000/users/1")
+            .then((res) => res.json())
+            .then(data => setUser(data))
+            .catch((err) => console.error("Error fetching user:", err));
+    }, []);
+
+    useEffect(() => {
+        if (user) setFormData(user);
+    }, [user]);
+
+    if (!user) return <p>Loading.....</p>;
 
     return (
         <>
@@ -80,8 +87,8 @@ const Profile = () => {
 
                                     {/* Profile info */}
                                     <div className="Profile-name pt-[30px] flex flex-col">
-                                        <h4 className="mt-[20px] mb-[20px] text-xl font-bold">Ronald Richards</h4>
-                                        <small className="text-gray-600">Sr. UX/UI Designer</small>
+                                        <h4 className="mt-[20px] mb-[20px] text-xl font-bold">{user?.name}</h4>
+                                        <small className="text-gray-600">{user?.role}</small>
 
                                         <div className="Candidate-name flex flex-col justify-center pb-2">
                                             <div className="mt-2 text-yellow-500 d-flex align-items-center gap-1">
@@ -125,8 +132,8 @@ const Profile = () => {
                                         { label: "Country", value: "United States" },
                                     ].map((item, i) => (
                                         <div key={i} className="pt-[20px]">
-                                            <h5 className="text-gray-800 text-[24px] font-medium leading-5">{item.label}</h5>
-                                            <p className="font-medium text-gray-700">{item.value}</p>
+                                            <h5 className="text-gray-800 text-[24px] font-medium leading-5">{item?.label}</h5>
+                                            <p className="font-medium text-gray-700">{item?.value}</p>
                                         </div>
                                     ))}
 
@@ -158,7 +165,7 @@ const Profile = () => {
                                             <span> About Me</span>
                                             <EditButton onClick={() => handleEdit("about")} className={`${styles["profile_edit"]} top-0 left-[100%]`} />
                                         </h4>
-                                        <p className="text-gray-700">{user.about}</p>
+                                        <p className="text-gray-700">{user?.about}</p>
                                     </div>
 
                                     {/* Skills */}
@@ -168,7 +175,7 @@ const Profile = () => {
                                             <EditButton onClick={() => handleEdit("skills")} className={`${styles["profile_edit"]} top-0 left-[100%]`} />
                                         </h4>
                                         <div className="flex flex-wrap gap-2">
-                                            {user.skills.map((skill, i) => (
+                                            {user?.skills.map((skill, i) => (
                                                 <span key={i} className="btn btn-primary">{skill}</span>
                                             ))}
                                         </div>
@@ -203,20 +210,19 @@ const Profile = () => {
                 title={`Edit ${modalSection ? modalSection.charAt(0).toUpperCase() + modalSection.slice(1) : "Profile"}`}
                 data={user}
             >
-                <RenderModalContent
+                {formData && 
+                 <RenderModalContent
                     modalSection={modalSection}
-                    formData={user}
-                    setFormData={setUser}
-                    handleInputChange={(e) =>
-                        setUser((prev) => ({
-                            ...prev,
-                            [e.target.name]: e.target.value,
-                        }))
-                    }
+                    formData={formData}
+                    setFormData={setFormData}
+                    handleInputChange={handleInputChange}
                 />
+                }
+               
+
 
                 {/* Add Save Button inside Modal */}
-                <div className="mt-4 flex justify-end">
+                {/* <div className="mt-4 flex justify-end">
                     <button
                         onClick={() => {
                             console.log("✅ Saved Data:", user);
@@ -226,7 +232,7 @@ const Profile = () => {
                     >
                         Save Changes
                     </button>
-                </div>
+                </div> */}
             </ModalCustom>
         </>
     );

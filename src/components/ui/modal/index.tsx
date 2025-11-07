@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+import styles from "./modal.module.css"
+
 interface ModalProps {
   open: boolean;
   onClose: () => void;
@@ -66,9 +68,9 @@ const ModalCustom: React.FC<ModalProps> = ({ open, onClose, title, data, onSave,
         )}
       </Modal.Body>
 
-      <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>Cancel</Button>
-        <Button variant="primary" onClick={handleSave}>Save Changes</Button>
+      <Modal.Footer className="mt-2 border-0">
+        <Button className={`${styles["cancel-button"]}`}  onClick={onClose}>Cancel</Button>
+        <Button className={`${styles["save-button"]}`} onClick={handleSave}>Save Changes</Button>
       </Modal.Footer>
     </Modal>
   );

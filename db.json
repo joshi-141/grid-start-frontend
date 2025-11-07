@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rahul Joshi",
+      "role": "Developer",
+      "about": "Dramatically envisioneer interactive leadership through functionalized ROI. Professionally simplify synergistic initiatives.",
+      "skills": [
+        "UI/UX Design",
+        "Graphic Design",
+        "Product Design",
+        "HTML",
+        "Development",
+        "WordPress",
+        "Back-End",
+        "Front-End"
+      ],
+      "experience": [
+        {
+          "title": "Sr. UX/UI Designer",
+          "company": "Netforth Software",
+          "years": "2 Years"
+        }
+      ]
+    }
+  ]
+}
