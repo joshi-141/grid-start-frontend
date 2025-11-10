@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className={gordita.variable}>
         <div className="flex flex-col h-screen">
           <Header className="h-[140px] fixed w-full" />
-          <main className="pt-[160px]">{children}</main>
+          <main className="pt-[140px]">{children}</main>
           <Footer />
         </div>
         <Script

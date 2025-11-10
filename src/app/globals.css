@@ -1347,10 +1347,11 @@ Download Apps
 /*=======================
 Download Apps
 =================*/
-.Customer-one {
-  background: rgba(25, 164, 99, .05) url('/images/bg/bg-2.png')no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+.customer-one {
+  background: rgba(25, 164, 99, .05) url('/images/bg/bg-2.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% 50% !important;
+  background-size: cover !important;
 }
 
 .customer_rapper {
@@ -1426,10 +1427,9 @@ SUBSCRIBE
 }
 
 .subscriber-content-left h2 {
-
   font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
+  font-weight: 700 !important;
+  font-size: 48px !important;
   line-height: 68px;
   color: #111D3B;
 }
@@ -2972,6 +2972,7 @@ Get Your Dream Job*/
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+  height: 70px;
 }
 
 .about-three-rapper .form-3 .button {
@@ -3378,7 +3379,6 @@ Get Your Dream Job*/
 }
 
 .right-job-list .job-list-heading strong {
-
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -3412,7 +3412,7 @@ Get Your Dream Job*/
   border-radius: 10px;
 }
 
-.right-job-list .job-list-1 .list-company {
+.right-job-list .job-list-1 .list-company, .list-company {
   border-bottom: 1px solid rgba(17, 29, 59, 0.1);
 }
 
@@ -3420,21 +3420,19 @@ Get Your Dream Job*/
   max-width: 13%;
 }
 
-.right-job-list .job-list-1 .list-company span {
-
+.right-job-list .job-list-1 .list-company span, .list-company span {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 26px;
-  color: #111D3B;
 }
 
-.right-job-list .job-list-1 .list-company span small {
+.right-job-list .job-list-1 .list-company span small, .list-company span small {
   font-weight: 300;
   font-size: 16px;
 }
 
-.right-job-list .job-list-1 .job-list-name h4 {
+.right-job-list .job-list-1 .job-list-name h4, .job-list-name h4 {
 
   font-style: normal;
   font-weight: 700;
@@ -3443,7 +3441,7 @@ Get Your Dream Job*/
   color: #111D3B;
 }
 
-.right-job-list .job-list-1 .job-list-name span {
+.right-job-list .job-list-1 .job-list-name span, .job-list-name span {
   padding-right: 20px;
 
   font-style: normal;
@@ -3457,7 +3455,7 @@ Get Your Dream Job*/
   color: rgba(25, 164, 99, 1);
 }
 
-.right-job-list .job-list-1 .job-list-name .job-apply a {
+.right-job-list .job-list-1 .job-list-name .job-apply a, .job-apply {
   background: rgba(25, 164, 99, 0.1);
   border-radius: 5px;
 
@@ -3471,7 +3469,7 @@ Get Your Dream Job*/
   transition: .3s ease-in-out;
 }
 
-.right-job-list .job-list-1 .job-list-name .job-apply a:hover {
+.right-job-list .job-list-1 .job-list-name .job-apply a:hover, .job-apply:hover {
   color: #ffffff;
   background: #19A463;
 }
@@ -3487,9 +3485,8 @@ Get Your Dream Job*/
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500 !important;
   font-size: 16px;
   line-height: 30px;
   color: #505050;
@@ -4044,30 +4041,27 @@ button.custom-btn:hover {
 }
 
 /*Candidate-list*/
-.Candidate-list .Candidate-list-1 {
-  background: #FFFFFF;
-  border: 1px solid rgba(17, 29, 59, 0.1);
-  border-radius: 10px;
-  padding: 40px;
+.Candidate-list .Candidate-list-1, .Candidate-list-1 {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(17, 29, 59, 0.1) !important;
+  border-radius: 10px !important;
+  padding: 40px !important;
 }
 
-.Candidate-list .Candidate-list-1 .Candidate-name h4 {
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: #111D3B;
+.Candidate-list .Candidate-list-1 .Candidate-name h4, .Candidate-name h4{
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  line-height: 30px !important;
+  color: #111D3B !important;
 }
 
-.Candidate-list .Candidate-list-1 .Candidate-name span {
-  padding-top: 10px;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 17px;
-  color: #505050;
+.Candidate-list .Candidate-list-1 .Candidate-name span, .Candidate-name span{
+  padding-top: 10px !important;
+  font-style: normal !important;
+  font-size: 16px !important;
+  line-height: 17px !important;
+  color: #505050 !important;
 
 }
 
@@ -4076,8 +4070,7 @@ button.custom-btn:hover {
   padding-right: 5px;
 }
 
-.Candidate-list .Candidate-list-1 .Candidate-name span strong {
-
+.Candidate-list .Candidate-list-1 .Candidate-name span .rating {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4087,19 +4080,17 @@ button.custom-btn:hover {
 }
 
 .Candidate-list .Candidate-list-1 .Candidate-place span {
-
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 400 !important;
+  font-size: 16px !important;
   line-height: 17px;
   color: #505050;
   padding: 0 8px;
 }
 
-.Candidate-list .Candidate-list-1 .Candidate-contact a {
+.Candidate-list .Candidate-list-1 .Candidate-contact a, .Candidate-contact {
   background: rgba(25, 164, 99, 0.1);
   border-radius: 5px;
-
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -4109,7 +4100,7 @@ button.custom-btn:hover {
   transition: .3s ease-in-out;
 }
 
-.Candidate-list .Candidate-list-1 .Candidate-contact a:hover {
+.Candidate-list .Candidate-list-1 .Candidate-contact a:hover, .Candidate-contact:hover {
   color: #ffffff;
   background: #19A463;
 }
