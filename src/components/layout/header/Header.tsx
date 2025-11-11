@@ -44,7 +44,7 @@ const Header = ({ className }: HeaderProps) => {
 
   return (
     <header className={`${styles.themeMainMenu} ${styles.stickyMenu} ${className} 
-    ${scrolled ? "bg-white shadow" : "bg-transparent"} z-50 `}>
+    ${scrolled ? "" : "bg-transparent"} z-50 `}>
       <Navbar expand="lg" className="">
         <Container className="d-flex align-items-center justify-content-between">
           {/* Logo */}

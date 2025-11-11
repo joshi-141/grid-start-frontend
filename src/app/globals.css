@@ -2966,8 +2966,8 @@ Get Your Dream Job*/
 
 .about-three-rapper .form-3 .placeholder input {
   width: 100%;
-  outline: none;
-  border: none;
+  outline: none !important;
+  border: none !important;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
