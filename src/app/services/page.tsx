@@ -13,6 +13,8 @@ import Form from "@/components/forms/Form";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 
+import FilterDropdown from "./FilterDropdown";
+
 interface LoginInputs {
     email: string;
     password: string;
@@ -92,34 +94,72 @@ const Services = () => {
                         <div className="w-full flex flex-wrap items-center justify-between gap-4">
                             {/* Left Dropdown Filters */}
                             <div className="flex flex-wrap items-center gap-3">
-                                {["Service options", "Seller details", "Budget", "Delivery time"].map(
-                                    (filter, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="relative group"
-                                        >
-                                            <button
-                                                className="flex items-center justify-between gap-2 px-4 py-2 border rounded-md bg-white hover:bg-gray-50 transition text-gray-800 font-medium text-sm"
-                                            >
-                                                {filter}
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    className="h-4 w-4 text-gray-500"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M19 9l-7 7-7-7"
-                                                    />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    )
-                                )}
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <FilterDropdown
+                                        title="Service options"
+                                        options={[
+                                            {
+                                                category: "Website type",
+                                                items: [
+                                                    { label: "E-Commerce store", count: 20 },
+                                                    { label: "Business", count: 18 },
+                                                    { label: "Dropshipping", count: 12 },
+                                                    { label: "Landing page", count: 11 },
+                                                ],
+                                            },
+                                            {
+                                                category: "Service offerings",
+                                                items: [
+                                                    { label: "Offers subscriptions", count: 8 },
+                                                    { label: "Paid video consultations", count: 30 },
+                                                ],
+                                            },
+                                        ]}
+                                    />
+
+                                    <FilterDropdown
+                                        title="Seller details"
+                                        options={[
+                                            {
+                                                category: "Seller type",
+                                                items: [
+                                                    { label: "Top rated", count: 15 },
+                                                    { label: "Level 2", count: 25 },
+                                                    { label: "New seller", count: 10 },
+                                                ],
+                                            },
+                                        ]}
+                                    />
+
+                                    <FilterDropdown
+                                        title="Budget"
+                                        options={[
+                                            {
+                                                category: "Price range",
+                                                items: [
+                                                    { label: "Under $50" },
+                                                    { label: "$50 - $200" },
+                                                    { label: "$200 & above" },
+                                                ],
+                                            },
+                                        ]}
+                                    />
+
+                                    <FilterDropdown
+                                        title="Delivery time"
+                                        options={[
+                                            {
+                                                category: "Turnaround",
+                                                items: [
+                                                    { label: "24 hours" },
+                                                    { label: "Up to 3 days" },
+                                                    { label: "Up to 7 days" },
+                                                ],
+                                            },
+                                        ]}
+                                    />
+                                </div>
+
                             </div>
 
                             {/* Right Toggle Filters */}
