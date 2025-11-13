@@ -9,7 +9,7 @@ import { FaStar } from "react-icons/fa";
 // import { FaRegClock } from "react-icons/fa6";
 import { GoArrowRight } from "react-icons/go";
 import { candidates, services } from "./data";
-import Form from "@/components/forms/Form";
+// import Form from "@/components/forms/Form";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 
@@ -57,9 +57,7 @@ const Services = () => {
                     <div className="container mx-auto text-center">
                         <h1 className="text-3xl md:text-4xl font-semibold pb-10">Service Listing</h1>
 
-                        <Form
-                            methods={methods}
-                            onSubmit={onSubmit}
+                        <form
                             className="form-3 d-flex align-items-center justify-content-between mx-auto">
                             <div className="item_1" ><Image src="images/icon/search.svg" alt="" width={16} height={16} /></div>
                             <div className="placeholder">
@@ -80,7 +78,7 @@ const Services = () => {
                                     <span>Search Now</span>
                                 </a>
                             </div>
-                        </Form>
+                        </form>
 
                     </div>
                 </div>

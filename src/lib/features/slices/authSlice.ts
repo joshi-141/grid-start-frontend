@@ -1,0 +1,51 @@
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import Cookies from "js-cookie";
+
+interface User {
+  id?: number;
+  username?: string;
+  email?: string;
+}
+
+interface AuthState {
+  user: User | null;
+  token: string | null;
+  loading: boolean;
+  error: string | null;
+}
+
+const initialState: AuthState = {
+  user: null,
+  token: Cookies.get("authToken") || null,
+  loading: false,
+  error: null,
+};
+
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
+  reducers: {
+    setLoading(state, action: PayloadAction<boolean>) {
+      state.loading = action.payload;
+    },
+    setError(state, action: PayloadAction<string | null>) {
+      state.error = action.payload;
+    },
+    setToken(state, action: PayloadAction<string>) {
+      state.token = action.payload;
+      Cookies.set("authToken", action.payload, { expires: 7 });
+    },
+    setUser(state, action: PayloadAction<User>) {
+      state.user = action.payload;
+    },
+    logout(state) {
+      state.user = null;
+      state.token = null;
+      Cookies.remove("authToken");
+    },
+  },
+});
+
+export const { setLoading, setError, setToken, setUser, logout } =
+  authSlice.actions;
+export default authSlice.reducer;

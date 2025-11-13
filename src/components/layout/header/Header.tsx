@@ -8,6 +8,7 @@ import styles from "./header.module.css";
 // import { Button } from "@/components/ui";
 import { FiUsers } from "react-icons/fi";
 import { FaRegBell } from "react-icons/fa";
+import Logout from "@/components/logout";
 
 interface HeaderProps {
   className?: string; // optional prop
@@ -77,6 +78,7 @@ const Header = ({ className }: HeaderProps) => {
               {/* <Link href="/signup">
                 <Button className={`${styles["custom-btn"]}`}>Create Account</Button>
               </Link> */}
+              <Logout />
             </div>
           </Navbar.Collapse>
         </Container>

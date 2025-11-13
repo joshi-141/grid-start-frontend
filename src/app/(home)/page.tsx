@@ -1,9 +1,10 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
+
   return (
     <>
-    <h1> Welcome to Home page.</h1>
+      <h1> Welcome to Home page.</h1>
     </>
   );
 }
