@@ -1,0 +1,42 @@
+.detail-card {
+    width: 100%;
+    max-width: 440px;
+    padding:30;
+    background: rgba(25, 164, 99, 0.05);
+    border-radius: 10px;
+}
+
+.tags {
+    background: rgba(25, 164, 99, .1);
+    border-radius: 2px;
+    padding: 2px 12px;
+    border-radius: 50px;
+    color: #19A463;
+}
+
+.custom-btn {
+    color: rgb(255, 255, 255);
+    background: rgb(25, 164, 99);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    color: #ffffff;
+    background: rgba(28 116 75 / 100%);
+}
+
+.custom-btn-light {
+    background: rgba(25, 164, 99, .1);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #19A463;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-btn-light:hover {
+    color: #ffffff;
+    background: #19A463;
+}

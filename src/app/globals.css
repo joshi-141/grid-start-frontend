@@ -4950,3 +4950,19 @@ button.custom-btn:hover {
   opacity: 1;
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
 }
+
+
+
+
+/* slick slider */
+.slick-next {
+    right: -15px !important;
+}
+.slick-prev {
+    left: -15px !important;
+    z-index: 2;
+}
+
+.slick-prev::before, .slick-next::before{
+  color: #000000 !important;
+}

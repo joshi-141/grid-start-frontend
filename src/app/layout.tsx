@@ -2,6 +2,8 @@ import Script from "next/script";
 import localFont from "next/font/local";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import AppWrapper from "@/components/appwrapper";
 
 import { ToastContainer } from "react-toastify";
