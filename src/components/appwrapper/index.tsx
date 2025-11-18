@@ -9,7 +9,7 @@ import { ReduxProvider } from "@/lib/store/provider";
 
 export default function AppWrapper({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
-    const authRoutes = ["/login", "/registration", "/forgotpassword"];
+    const authRoutes = ["/login", "/registration", "/forgot-password", "/reset-password", "/change-password"];
     const isAuthPage = authRoutes.includes(pathname);
 
     if (isAuthPage) {

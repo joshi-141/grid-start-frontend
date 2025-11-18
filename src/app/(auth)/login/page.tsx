@@ -9,21 +9,20 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation"; // ✅ correct for client-side cookies
 import { useAppDispatch } from "@/lib/store";
 import { setToken } from "@/lib/features/slices/authSlice";
+import Image from "next/image";
 
-interface fieldType {
-  username: string;
-  email: string;
+interface FieldType {
+  login: string;      // username or email
   password: string;
 }
 
-const initialFormData = {
-  username: "",
-  email: "",
+const initialFormData: FieldType = {
+  login: "",
   password: "",
 };
 
 export default function LoginPage() {
-  const [formData, setFormData] = useState<fieldType>(initialFormData);
+  const [formData, setFormData] = useState<FieldType>(initialFormData);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -38,16 +37,36 @@ export default function LoginPage() {
     setError(null);
     setLoading(true);
 
+    const isEmail = formData.login.includes("@");
+
+    const payload = {
+      username: isEmail ? "" : formData.login,
+      email: isEmail ? formData.login : "",
+      password: formData.password,
+    };
+
     try {
-      const response = await authApi.login(formData);
+      const response = await authApi.login(payload);
+      const token = response.data.key;
+      dispatch(setToken(token));
+
       toast.success("Login successful!");
-      dispatch(setToken(response.data.key));
+
       router.push("/");
       setFormData(initialFormData);
 
     } catch (err: any) {
-      console.error("❌ Error:", err);
-      setError(err.message || "Login failed");
+      const backendError = err.response?.data;
+
+      if (backendError?.non_field_errors) {
+        setError(backendError.non_field_errors[0]);
+      } else if (backendError?.email) {
+        setError(backendError.email[0]);
+      } else if (backendError?.username) {
+        setError(backendError.username[0]);
+      } else {
+        setError(backendError || "Login failed");
+      }
     } finally {
       setLoading(false);
     }
@@ -59,28 +78,25 @@ export default function LoginPage() {
         onSubmit={handleSubmit}
         className="bg-white rounded-lg shadow max-w-md w-full"
       >
-        <h2 className="candidates-details-left mb-8 py-4 text-center" style={{ borderRadius: "0" }}>
+        <h2
+          className="candidates-details-left mb-8 py-4 text-center"
+          style={{ borderRadius: "0" }}
+        >
           Login
         </h2>
 
-        <div className="flex flex-col gap-3 p-4">
+        <div className="flex flex-col gap-3 p-4 pb-2">
+          {/* Username or Email */}
           <Input
-            label="User Name"
-            name="username"
-            value={formData.username}
+            label="Email or Username"
+            name="login"
+            value={formData.login}
             onChange={handleChange}
             type="text"
             required
           />
-          <Input
-            label="Email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            type="email"
-            required
-          />
 
+          {/* Password */}
           <Input
             label="Password"
             name="password"
@@ -90,8 +106,10 @@ export default function LoginPage() {
             required
           />
 
-          {error && <p className="text-sm text-red-600 text-center">{error}</p>}
+          {/* Error message */}
+          {error && <p className="text-sm text-red-600">{error}</p>}
 
+          {/* Submit button */}
           <Button
             type="submit"
             disabled={loading}
@@ -100,15 +118,36 @@ export default function LoginPage() {
             {loading ? "Logging in..." : "Login"}
           </Button>
 
-          <p className="text-sm text-center">
-            <Link
-              href="/forgotpassword"
-              className="text-blue-600 hover:text-blue-700 font-medium"
-            >
+          {/* <span className="text-center">
+            <Link href="/forgot-password" className="font-medium mt-2">
               Forgot password?
             </Link>
-          </p>
+          </span> */}
+
         </div>
+        {/* ⭐ Google Register Button ADDED HERE */}
+        <div className="w-full flex flex-wrap items-center justify-center px-4 ">
+          <button
+            type="button"
+            onClick={() => console.log("Google Register Clicked")}
+            className="w-full flex items-center justify-center gap-3 border rounded mt-2 p-2 bg-white hover:bg-gray-50 transition shadow-sm"
+          >
+            <Image
+              src="/images/icon/google.png"
+              alt="Google"
+              width={20}
+              height={20}
+            />
+            <span className="text-sm font-medium tracking-wide">
+              Login with Google
+            </span>
+          </button>
+          
+           <span className="w-full text-center mt-2">Or</span>
+          <Link href="/registration" className="p-4 pt-2 underline"> Click to register </Link>
+
+        </div>
+
       </form>
     </div>
   );

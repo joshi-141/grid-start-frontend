@@ -82,7 +82,7 @@ export const services: Service[] = [
         title: "Our agency will develop a topnotch business website",
         rating: 4.9,
         reviews: 772,
-        price: "₹27,933",
+        price: "$27,933",
         vetted: true,
     },
     {
@@ -92,7 +92,7 @@ export const services: Service[] = [
         title: "I will design highlevel sales funnel landing page",
         rating: 4.9,
         reviews: 71,
-        price: "₹18,157",
+        price: "$18,157",
         vetted: true,
     },
     {
@@ -103,7 +103,7 @@ export const services: Service[] = [
             "Our agency will design or redesign ecommerce business wordpress website",
         rating: 4.9,
         reviews: 306,
-        price: "₹27,468",
+        price: "$27,468",
         vetted: true,
     },
     {
@@ -113,7 +113,7 @@ export const services: Service[] = [
         title: "I will build, redesign responsive wordpress website design for you",
         rating: 4.8,
         reviews: 464,
-        price: "₹22,812",
+        price: "$22,812",
         vetted: true,
     },
     {
@@ -123,7 +123,7 @@ export const services: Service[] = [
         title: "Our agency will develop a topnotch business website",
         rating: 4.9,
         reviews: 772,
-        price: "₹27,933",
+        price: "$27,933",
         vetted: true,
     },
     {
@@ -133,7 +133,7 @@ export const services: Service[] = [
         title: "I will design highlevel sales funnel landing page",
         rating: 4.9,
         reviews: 71,
-        price: "₹18,157",
+        price: "$18,157",
         vetted: true,
     },
     {
@@ -144,7 +144,7 @@ export const services: Service[] = [
             "Our agency will design or redesign ecommerce business wordpress website",
         rating: 4.9,
         reviews: 306,
-        price: "₹27,468",
+        price: "$27,468",
         vetted: true,
     },
     {
@@ -154,7 +154,7 @@ export const services: Service[] = [
         title: "I will build, redesign responsive wordpress website design for you",
         rating: 4.8,
         reviews: 464,
-        price: "₹22,812",
+        price: "$22,812",
         vetted: true,
     },
 ];
@@ -168,7 +168,7 @@ export const johnServices: Service[] = [
         title: "Our agency will develop a topnotch business website",
         rating: 4.9,
         reviews: 772,
-        price: "₹27,933",
+        price: "$27,933",
         vetted: true,
     },
     {
@@ -178,7 +178,7 @@ export const johnServices: Service[] = [
         title: "I will design highlevel sales funnel landing page",
         rating: 4.9,
         reviews: 71,
-        price: "₹18,157",
+        price: "$18,157",
         vetted: true,
     },
     {
@@ -189,7 +189,7 @@ export const johnServices: Service[] = [
             "Our agency will design or redesign ecommerce business wordpress website",
         rating: 4.9,
         reviews: 306,
-        price: "₹27,468",
+        price: "$27,468",
         vetted: true,
     },
     {
@@ -199,7 +199,7 @@ export const johnServices: Service[] = [
         title: "I will build, redesign responsive wordpress website design for you",
         rating: 4.8,
         reviews: 464,
-        price: "₹22,812",
+        price: "$22,812",
         vetted: true,
     },
     {
@@ -209,7 +209,7 @@ export const johnServices: Service[] = [
         title: "Our agency will develop a topnotch business website",
         rating: 4.9,
         reviews: 772,
-        price: "₹27,933",
+        price: "$27,933",
         vetted: true,
     },
     {
@@ -219,7 +219,7 @@ export const johnServices: Service[] = [
         title: "I will design highlevel sales funnel landing page",
         rating: 4.9,
         reviews: 71,
-        price: "₹18,157",
+        price: "$18,157",
         vetted: true,
     },
     {
@@ -230,7 +230,7 @@ export const johnServices: Service[] = [
             "Our agency will design or redesign ecommerce business wordpress website",
         rating: 4.9,
         reviews: 306,
-        price: "₹27,468",
+        price: "$27,468",
         vetted: true,
     },
     {
@@ -240,7 +240,7 @@ export const johnServices: Service[] = [
         title: "I will build, redesign responsive wordpress website design for you",
         rating: 4.8,
         reviews: 464,
-        price: "₹22,812",
+        price: "$22,812",
         vetted: true,
     },
 ];

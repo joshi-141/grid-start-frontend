@@ -1,25 +1,21 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button, Input, Select } from "@/components/ui";
+import { Input, Select } from "@/components/ui";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
-// import { BsFillGeoAltFill } from "react-icons/bs";
-// import { BsCalendar2Week } from "react-icons/bs";
-// import { FaRegClock } from "react-icons/fa6";
 import { GoArrowRight } from "react-icons/go";
-import { candidates, services } from "./data";
-// import Form from "@/components/forms/Form";
+import { services } from "./data";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 
 import FilterDropdown from "./FilterDropdown";
 
+
 interface LoginInputs {
     email: string;
     password: string;
 }
-
 
 const Services = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -48,6 +44,7 @@ const Services = () => {
 
     }, []);
 
+  
     return (
         <>
 
@@ -226,7 +223,7 @@ const Services = () => {
                                 {/* Card Info */}
                                 <div className="p-4 flex flex-col gap-3">
                                     <div className="flex flex-wrap items-center justify-between gap-2">
-                                        <h5 className="m-0 font-semibold"> {service.seller} </h5>
+                                        <h5 className="m-0 font-semibold"><Link href={"/single-service"}>{service.seller}</Link> </h5>
                                         <p className="line-clamp-2 m-0" style={{ lineHeight: "20px" }}>
                                             {service.title}
                                         </p>

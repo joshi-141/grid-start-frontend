@@ -4,17 +4,26 @@ import Cookies from "js-cookie";
 
 const axiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
-  headers:{ "Content-Type": "application/json",}
+  headers: { "Content-Type": "application/json", },
   // withCredentials: true,
 });
 
 // 🔹 Request Interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token = Cookies.get("authToken");
-    if (token) {
-      config.headers.Authorization = `Token ${token}`;
+  //   const csrfToken = Cookies.get("csrftoken");
+  //   if (csrfToken) {
+  //   config.headers["X-CSRFToken"] = csrfToken;
+  // }
+
+
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("token");
+      if (token) {
+        config.headers.Authorization = `Token ${token}`;
+      }
     }
+
     return config;
   },
   (error) => Promise.reject(error)

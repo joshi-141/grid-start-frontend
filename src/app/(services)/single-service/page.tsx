@@ -12,6 +12,9 @@ import Image from "next/image";
 import styles from "./service.module.css";
 
 import Slider from "react-slick";
+import { useAppSelector } from "@/lib/store";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const settings = {
   dots: false,
@@ -83,6 +86,11 @@ const REVIEWS = [
 ];
 
 export default function Page() {
+  const {user} = useAppSelector(state=>state.auth)
+  const router = useRouter();
+
+  // if(!user) router.push("/login")
+
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -502,7 +510,7 @@ export default function Page() {
                 </div>
 
                 <div className="mt-4">
-                  <button className={` ${styles["custom-btn"]} w-full py-2`}>Continue</button>
+                  <Link href={"/"} className={` ${styles["custom-btn"]} py-2`}>Continue</Link>
                 </div>
 
                 <div className="mt-4 text-xs ">
