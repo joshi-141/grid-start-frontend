@@ -1,191 +1,212 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Input, Button, Textarea } from "@/components/ui";
+import { Card, CardContent } from "@/components/ui/card";
+import Progress from "@/components/ui/progress"; // your custom progress
 
-const PostServicePage = () => {
-  const [form, setForm] = useState({
-    title: "",
-    category: "",
-    price: "",
-    description: "",
-  });
+export default function ServiceWizard() {
+  const [step, setStep] = useState(1);
+  const [role, setRole] = useState("");
 
-  const marketplaceServices = [
-    {
-      id: 1,
-      title: "Full-Stack Web App",
-      seller: "Rahul",
-      price: "$250",
-      image: "/images/sample1.jpg",
-    },
-    {
-      id: 2,
-      title: "Mobile App UI Design",
-      seller: "Priya",
-      price: "$80",
-      image: "/images/sample2.jpg",
-    },
-  ];
+  const next = () => setStep((s) => Math.min(5, s + 1));
+  const prev = () => setStep((s) => Math.max(1, s - 1));
 
-  // NEW — Offered Services (GIGS LIST FROM FREELANCERS)
-  const offeredServices = [
-    {
-      id: 1,
-      title: "Professional Logo Design",
-      freelancer: "Aarav Studio",
-      price: "$40",
-      rating: 4.8,
-      image: "/images/gig1.jpg",
-    },
-    {
-      id: 2,
-      title: "Next.js Website Development",
-      freelancer: "Riya Codes",
-      price: "$200",
-      rating: 5,
-      image: "/images/gig2.jpg",
-    },
-    {
-      id: 3,
-      title: "SEO Keyword Research",
-      freelancer: "Kunal SEO",
-      price: "$25",
-      rating: 4.9,
-      image: "/images/gig3.jpg",
-    },
-  ];
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const isFreelancer = role === "freelancer";
+  const isClient = role === "client";
 
   return (
-    <div className="w-full px-6 py-10 max-w-7xl mx-auto">
+    <div className="min-h-screen flex items-center justify-center py-10 bg-gray-50">
+      <Card className="w-full min-h-[400px] max-w-3xl shadow-xl rounded-2xl p-4">
+        <CardContent>
 
-      {/* ------------------------------------------------ */}
-      {/* POST A SERVICE — your original section kept intact */}
-      {/* ------------------------------------------------ */}
+          {/* Progress Only After Step 1 */}
+          {step > 1 && <Progress value={(step - 1) * 25} className="mb-4" />}
 
-      <h1 className="text-3xl font-bold mb-6">Post a Service</h1>
-
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white shadow p-6 rounded-lg">
-        <div className="flex flex-col">
-          <label className="font-semibold">Service Title</label>
-          <input
-            name="title"
-            value={form.title}
-            onChange={handleChange}
-            className="border p-2 rounded"
-            placeholder="e.g. Website Development"
-          />
-        </div>
-
-        <div className="flex flex-col">
-          <label className="font-semibold">Category</label>
-          <input
-            name="category"
-            value={form.category}
-            onChange={handleChange}
-            className="border p-2 rounded"
-            placeholder="e.g. Design / Development"
-          />
-        </div>
-
-        <div className="flex flex-col">
-          <label className="font-semibold">Price</label>
-          <input
-            name="price"
-            value={form.price}
-            onChange={handleChange}
-            className="border p-2 rounded"
-            placeholder="$100"
-          />
-        </div>
-
-        <div className="flex flex-col col-span-1 md:col-span-2">
-          <label className="font-semibold">Description</label>
-          <textarea
-            name="description"
-            value={form.description}
-            onChange={handleChange}
-            className="border p-2 rounded h-28"
-            placeholder="Write details about your service..."
-          />
-        </div>
-
-        <button className="bg-black text-white py-3 rounded-lg mt-2 col-span-1 md:col-span-2">
-          Submit Service
-        </button>
-      </form>
-
-
-      {/* ------------------------------------------------ */}
-      {/* MARKETPLACE SERVICES — your grid stays as-is     */}
-      {/* ------------------------------------------------ */}
-
-      <h2 className="text-2xl font-bold mt-12 mb-4">Marketplace Services</h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {marketplaceServices.map((service) => (
-          <div
-            key={service.id}
-            className="bg-white shadow rounded-lg overflow-hidden"
+          <motion.div
+            key={step}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-6"
           >
-            <img
-              src={service.image}
-              alt=""
-              className="h-40 w-full object-cover"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold">{service.title}</h3>
-              <p className="text-sm text-gray-600">By {service.seller}</p>
-              <p className="font-bold mt-2">{service.price}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+            {/* --------------------- STEP 1 --------------------- */}
+            {step === 1 && (
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold mt-2">
+                  What would you like to do?
+                </h3>
+                <p className="text-gray-500 text-sm">
+                  Choose whether you're a client posting a job request or a freelancer offering services.
+                </p>
 
+                <div className="flex gap-4 mt-4">
 
+                  {/* Client option */}
+                  <div
+                    onClick={() => setRole("client")}
+                    className={`border rounded-xl p-3 cursor-pointer transition-all ${
+                      role === "client"
+                        ? "border-blue-500 bg-blue-50"
+                        : "border-gray-200 bg-white"
+                    }`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div
+                        className={`w-5 h-5 rounded-full border flex items-center justify-center ${
+                          role === "client"
+                            ? "border-blue-600"
+                            : "border-gray-400"
+                        }`}
+                      >
+                        {role === "client" && (
+                          <div className="w-3 h-3 rounded-full bg-blue-600" />
+                        )}
+                      </div>
 
-      {/* ------------------------------------------------ */}
-      {/* NEW SECTION — OFFERED SERVICES (GIGS)            */}
-      {/* ------------------------------------------------ */}
+                      <div>
+                        <p className="font-semibold">I'm a Client</p>
+                        <p className="text-sm text-gray-500">
+                          I want to post a job request and hire freelancers.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-      <h2 className="text-2xl font-bold mt-12 mb-4">Offered Services</h2>
+                  {/* Freelancer option */}
+                  <div
+                    onClick={() => setRole("freelancer")}
+                    className={`border rounded-xl p-4 cursor-pointer transition-all ${
+                      role === "freelancer"
+                        ? "border-green-500 bg-green-50"
+                        : "border-gray-200 bg-white"
+                    }`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div
+                        className={`w-5 h-5 rounded-full border flex items-center justify-center ${
+                          role === "freelancer"
+                            ? "border-green-600"
+                            : "border-gray-400"
+                        }`}
+                      >
+                        {role === "freelancer" && (
+                          <div className="w-3 h-3 rounded-full bg-green-600" />
+                        )}
+                      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                      <div>
+                        <p className="font-semibold">I'm a Freelancer</p>
+                        <p className="text-sm text-gray-500">
+                          I want to offer my skills & services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        {offeredServices.map((gig) => (
-          <div
-            key={gig.id}
-            className="bg-white shadow rounded-xl overflow-hidden hover:scale-[1.02] transition"
-          >
-            <img
-              src={gig.image}
-              alt={gig.title}
-              className="h-44 w-full object-cover"
-            />
-
-            <div className="p-4">
-              <h3 className="font-semibold">{gig.title}</h3>
-
-              <p className="text-gray-600 text-sm">By {gig.freelancer}</p>
-
-              <div className="flex justify-between items-center mt-3">
-                <span className="font-bold">{gig.price}</span>
-                <span className="text-yellow-500 font-semibold">
-                  ⭐ {gig.rating}
-                </span>
+                {/* <Button
+                  disabled={!role}
+                  onClick={next}
+                  className="w-full mt-4 py-6 text-base rounded-xl"
+                >
+                  Continue
+                </Button> */}
               </div>
-            </div>
-          </div>
-        ))}
+            )}
 
-      </div>
+            {/* --------------------- STEP 2 --------------------- */}
+            {step === 2 && (
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold mt-2">
+                  {isClient ? "Job Details" : "Basic Service Details"}
+                </h3>
+                <Input placeholder={isClient ? "Job Title" : "Service Title"} />
+                <Textarea
+                  placeholder={
+                    isClient
+                      ? "Describe the job you want to get done"
+                      : "Short description of your service"
+                  }
+                />
+              </div>
+            )}
+
+            {/* --------------------- STEP 3 --------------------- */}
+            {step === 3 && (
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold mt-2">Category & Skills</h3>
+                <Input
+                  placeholder={
+                    isClient
+                      ? "Category (Development, Design, etc.)"
+                      : "Service Category"
+                  }
+                />
+                <Input placeholder="Skills (comma separated)" />
+              </div>
+            )}
+
+            {/* --------------------- STEP 4 --------------------- */}
+            {step === 4 && (
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold mt-2">Pricing</h3>
+
+                {isClient ? (
+                  <>
+                    <Input
+                      type="number"
+                      placeholder="Your Budget (₹)"
+                    />
+                    <Input
+                      type="number"
+                      placeholder="Max Hourly Rate (₹/hr)"
+                    />
+                  </>
+                ) : (
+                  <>
+                    <Input
+                      type="number"
+                      placeholder="Starting Price (₹)"
+                    />
+                    <Input
+                      type="number"
+                      placeholder="Hourly Rate (₹/hr)"
+                    />
+                  </>
+                )}
+              </div>
+            )}
+
+            {/* --------------------- STEP 5 --------------------- */}
+            {step === 5 && (
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold mt-2">Upload & Finish</h3>
+                <Input type="file" />
+                <Textarea placeholder="Additional Notes (Optional)" />
+              </div>
+            )}
+          </motion.div>
+
+          {/* --------------------- BUTTONS --------------------- */}
+          <div className="flex justify-between mt-8">
+            {step > 1 ? (
+              <Button onClick={prev}>Back</Button>
+            ) : (
+              <div></div>
+            )}
+
+            {step < 5 ? (
+              <Button onClick={next}>Next</Button>
+            ) : (
+              <Button className="bg-green-600 hover:bg-green-700 text-white">
+                Submit
+              </Button>
+            )}
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
-};
-
-export default PostServicePage;
+}

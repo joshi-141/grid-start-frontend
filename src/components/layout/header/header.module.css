@@ -32,6 +32,25 @@
     font-weight: 500 !important;
 }
 
+
+.logout-btn {
+    color: #e7000b;
+    padding: 0.5rem 1rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    font-size: 18px;
+    font-weight: 500 !important;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* ---------- Hover & Active States ---------- */
+.logout-btn:hover{
+    background-color: #fef2f2;
+}
+
 /* ✅ Custom active class from Next.js logic */
 .active {
     color: rgb(25, 164, 99) !important;

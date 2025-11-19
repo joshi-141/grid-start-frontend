@@ -48,12 +48,12 @@ export default function LoginPage() {
     try {
       const response = await authApi.login(payload);
       const token = response.data.key;
+
       dispatch(setToken(token));
-
+      document.cookie = `token=${token}; path=/; SameSite=Lax;`;
       toast.success("Login successful!");
-
-      router.push("/");
       setFormData(initialFormData);
+      router.push("/");
 
     } catch (err: any) {
       const backendError = err.response?.data;
@@ -142,13 +142,13 @@ export default function LoginPage() {
               Login with Google
             </span>
           </button>
-          
-           <span className="w-full text-center mt-2">Or</span>
-          <Link href="/registration" className="p-4 pt-2 underline"> Click to register </Link>
+
+          <span className="w-full text-center mt-3">Or</span>
+          <Link href="/registration" className="span-two p-4 pt-2 text-green-700"> Click to register </Link>
 
         </div>
 
       </form>
     </div>
-  );
+  )
 }

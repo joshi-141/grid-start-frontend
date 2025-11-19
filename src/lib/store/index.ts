@@ -1,20 +1,24 @@
 "use client";
 
-import { configureStore, combineReducers  } from '@reduxjs/toolkit'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
 import authReducer from "@/lib/features/slices/authSlice";
-import { useDispatch, useSelector, TypedUseSelectorHook  } from 'react-redux';
+import loaderReducer from "@/lib/features/slices/loaderSlice";
+
+
+import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  loader: loaderReducer,
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["auth"], 
+  whitelist: ["auth"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -23,7 +27,7 @@ export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false, 
+      serializableCheck: false,
     }),
 })
 

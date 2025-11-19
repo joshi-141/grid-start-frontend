@@ -2,21 +2,20 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
+import { store } from "@/lib/store";
+import { showLoader, hideLoader } from "@/lib/features/slices/loaderSlice";
+
 const axiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
-  headers: { "Content-Type": "application/json", },
-  // withCredentials: true,
+  headers: { "Content-Type": "application/json" },
 });
 
 // 🔹 Request Interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
-  //   const csrfToken = Cookies.get("csrftoken");
-  //   if (csrfToken) {
-  //   config.headers["X-CSRFToken"] = csrfToken;
-  // }
+    store.dispatch(showLoader()); // 👈 START LOADER
 
-
+    // Attach token
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("token");
       if (token) {
@@ -26,22 +25,29 @@ axiosInstance.interceptors.request.use(
 
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => {
+    store.dispatch(hideLoader());
+    return Promise.reject(error);
+  }
 );
 
 // 🔹 Response Interceptor
 axiosInstance.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    store.dispatch(hideLoader()); 
+    return response;
+  },
   (error) => {
+    store.dispatch(hideLoader()); 
+
     if (error.response?.status === 401) {
-      // Token expired or invalid — clear it
       Cookies.remove("authToken");
-      console.error("Unauthorized! Token removed.");
-      // Optionally redirect to login page if using client components
+
       if (typeof window !== "undefined") {
         window.location.href = "/login";
       }
     }
+
     return Promise.reject(error);
   }
 );

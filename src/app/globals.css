@@ -38,6 +38,8 @@ p {
   line-height: 25px;
 }
 
+a{text-decoration: none;}
+
 button {
   font-family: var(--font-gordita), sans-serif;
 }

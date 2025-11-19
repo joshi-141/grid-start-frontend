@@ -34,30 +34,24 @@ export default function PasswordForm() {
     return (
         <form onSubmit={handleSubmit}>
             <h2 className="text-xl font-semibold mb-4">Change Password</h2>
-            {/* 
-            <Input
-                label="Old Password"
-                name="old_password"
-                type="password"
-                onChange={handleChange}
-                className="mb-3"
-            /> */}
-            <Input
-                label="New Password"
-                name="new_password1"
-                type="password"
-                onChange={handleChange}
-                className="mb-3"
-            />
-            <Input
-                label="Confirm New Password"
-                name="new_password2"
-                type="password"
-                onChange={handleChange}
-                className="mb-3"
-            />
+            <form action="">
+                <div className="flex flex-col gap-3">
+                    <Input
+                        label="New Password"
+                        name="new_password1"
+                        type="password"
+                        onChange={handleChange}
+                    />
+                    <Input
+                        label="Confirm New Password"
+                        name="new_password2"
+                        type="password"
+                        onChange={handleChange}
+                    />
+                </div>
+            </form>
 
-            <Button>Update Password</Button>
+            <Button className="custom-btn mt-3" style={{ height: "45px", fontWeight: "500" }} >Update Password</Button>
         </form>
     );
 }

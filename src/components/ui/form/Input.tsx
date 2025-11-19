@@ -37,14 +37,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
         ) : (
 
-          <div className="w-full relative">
+          <div className={`w-full relative rounded-md overflow-hidden border ${error ? "border-red-500" : "border-gray-300"
+                } `}>
             <input
               id={props.id}
               ref={ref}
               {...props}
               type={inputType}
-              className={` w-full border rounded-md px-3 py-2 focus:outline-none  ${error ? "border-red-500" : "border-gray-300"
-                }`}
+              className={` w-full px-3 py-2 focus:outline-none`}
             />
 
             {isPassword &&

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import styles from "./header.module.css";
 // import { Button } from "@/components/ui";
 import { FaRegBell } from "react-icons/fa";
-// import Logout from "@/components/logout";
+import Logout from "@/components/logout";
 import { useAppSelector } from "@/lib/store";
 
 import { FiUsers, FiSettings, FiLogOut, FiUser, FiBriefcase } from "react-icons/fi";
@@ -106,7 +106,7 @@ const Header = ({ className }: HeaderProps) => {
 
                       <Link
                         href="/profile"
-                        className={` ${styles["nav-link"]} gap-3 px-2 py-2 hover:bg-gray-100 transition rounded`} style={{ display: "flex" }}
+                        className={` ${styles["nav-link"]} gap-3 px-2 py-2 hover:bg-gray-100 transition rounded items-center`} style={{ display: "flex" }}
                       >
                         <FiUser />
                         Profile
@@ -114,7 +114,7 @@ const Header = ({ className }: HeaderProps) => {
 
                       <Link
                         href="/profile/settings"
-                          className={` ${styles["nav-link"]} gap-3 px-2 py-2 hover:bg-gray-100 transition rounded`} style={{display:"flex"}}
+                          className={` ${styles["nav-link"]} gap-3 px-2 py-2 hover:bg-gray-100 transition rounded items-center`} style={{display:"flex"}}
                       >
                         <FiSettings />
                         Settings
@@ -122,7 +122,7 @@ const Header = ({ className }: HeaderProps) => {
 
                       <Link
                         href="/my-services"
-                          className={` ${styles["nav-link"]} gap-3 px-2 py-2 hover:bg-gray-100 transition rounded`} style={{display:"flex"}}
+                          className={` ${styles["nav-link"]} gap-3 px-2 py-2 hover:bg-gray-100 transition rounded items-center`} style={{display:"flex"}}
                       >
                         <FiBriefcase />
                         My Services
@@ -130,13 +130,16 @@ const Header = ({ className }: HeaderProps) => {
 
                       <div className="border-t border-gray-200 my-2" />
 
-                      <button
+                        <Logout icon={<FiLogOut />} className={`${styles["logout-btn"]}`} />
+
+                      {/* <button
                         onClick={() => console.log("logout")}
                         className="flex items-center gap-3 px-2 py-2 w-full text-left hover:bg-red-50 text-red-600 transition rounded"
                       >
+                        
                         <FiLogOut />
                         Logout
-                      </button>
+                      </button> */}
                     </div>
                   )}
                 </div>

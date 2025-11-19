@@ -150,8 +150,8 @@ export default function Registration() {
               Register with Google
             </span>
           </button>
-          <span className="w-full text-center mt-2">Or</span>
-          <Link href="/login" className="p-4 pt-2 underline"> Click to login </Link>
+          <span className="w-full text-center mt-3">Or</span>
+          <Link href="/login" className="span-two p-4 pt-2"> Click to login </Link>
 
         </div>
       </form>

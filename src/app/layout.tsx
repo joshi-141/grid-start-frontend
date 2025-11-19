@@ -20,15 +20,14 @@ const gordita = localFont({
 });
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
       <body className={`${gordita.variable} font-gordita`}>
         <AppWrapper>{children}</AppWrapper>
-
         <ToastContainer
           position="top-right"
           autoClose={3000}
@@ -47,5 +46,5 @@ export default function RootLayout({
         />
       </body>
     </html>
-  );
+  )
 }

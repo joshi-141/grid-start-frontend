@@ -11,7 +11,7 @@ export function ReduxProvider({ children }: { children: React.ReactNode }) {
         <PersistGate loading={null} persistor={persistor}>
           {children}
         </PersistGate>
-      </Provider>;
+      </Provider>
     </>
   )
 

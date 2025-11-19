@@ -5,7 +5,8 @@ import { Button } from "../ui";
 import { logout } from "@/lib/features/slices/authSlice";
 import { useRouter } from "next/navigation";
 
-const Logout = () => {
+
+const Logout = ({ className, icon }: any) => {
 
     const dispatch = useAppDispatch();
     const router = useRouter();
@@ -13,11 +14,12 @@ const Logout = () => {
     const handleLogOut = () => {
         dispatch(logout());
         persistor.purge();
+        document.cookie = "token=; Path=/; Max-Age=0; SameSite=Lax; Secure";
         router.push("/login");
     }
 
     return (
-        <Button onClick={handleLogOut}>Logout</Button>
+        <Button onClick={handleLogOut} className={`${className}`}>{icon} Logout</Button>
     );
 }
 
