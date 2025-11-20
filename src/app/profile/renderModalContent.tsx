@@ -3,15 +3,7 @@
 import AboutModal from "./editModalComponents/AboutModal";
 import EditProfileModal from "./editModalComponents/EditProfileModal";
 import SkillsModal from "./editModalComponents/SkillsModal";
-import ExperienceModal from "./editModalComponents/ExperienceModal"
-
-
-interface RenderModalContentProps {
-  modalSection: string | null;
-  formData?: UserFormData;
-  setFormData: React.Dispatch<React.SetStateAction<any>>;
-  handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-}
+import ExperienceModal from "./editModalComponents/ExperienceModal";
 
 interface UserFormData {
   name: string;
@@ -19,6 +11,15 @@ interface UserFormData {
   about: string;
   skills: string[];
   experience: any;
+}
+
+interface RenderModalContentProps {
+  modalSection: string | null;
+  formData?: UserFormData;
+  setFormData: React.Dispatch<React.SetStateAction<any>>;
+  handleInputChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void; // required
 }
 
 export default function RenderModalContent({
@@ -30,20 +31,35 @@ export default function RenderModalContent({
   switch (modalSection) {
     case "profile":
       return (
-        <EditProfileModal formData={formData} handleInputChange={handleInputChange} />
+        <EditProfileModal
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
       );
+
     case "about":
       return (
-        <AboutModal formData={formData} handleInputChange={handleInputChange} />
+        <AboutModal
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
       );
+
     case "skills":
       return (
-        <SkillsModal  formData={formData} setFormData={setFormData} handleInputChange={handleInputChange} />
+        <SkillsModal
+          formData={formData}
+          setFormData={setFormData}
+          handleInputChange={handleInputChange}
+        />
       );
 
     case "experience":
       return (
-        <ExperienceModal formData={formData} setFormData={setFormData} />
+        <ExperienceModal
+          formData={formData}
+          setFormData={setFormData}
+        />
       );
 
     default:

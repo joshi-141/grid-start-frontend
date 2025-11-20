@@ -19,6 +19,9 @@ interface UserFormData {
 interface EditSkillsFormProps {
   formData?: UserFormData;
   setFormData: React.Dispatch<React.SetStateAction<UserFormData | null>>;
+  handleInputChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;   // ✅ Added this
 }
 
 const availableSkills = [
@@ -47,8 +50,8 @@ const SkillsModal = ({ formData, setFormData }: EditSkillsFormProps) => {
     if (!formData) return;
 
     const updatedSkills = formData.skills.includes(skill)
-      ? formData.skills.filter((s) => s !== skill) // Uncheck (remove)
-      : [...formData.skills, skill]; // Check (add)
+      ? formData.skills.filter((s) => s !== skill)
+      : [...formData.skills, skill];
 
     setFormData((prev) => (prev ? { ...prev, skills: updatedSkills } : prev));
   };
@@ -57,11 +60,13 @@ const SkillsModal = ({ formData, setFormData }: EditSkillsFormProps) => {
     if (!formData || !customSkill.trim()) return;
 
     const newSkill = customSkill.trim();
+
     if (!formData.skills.includes(newSkill)) {
       setFormData((prev) =>
         prev ? { ...prev, skills: [...prev.skills, newSkill] } : prev
       );
     }
+
     setCustomSkill("");
   };
 
@@ -69,7 +74,6 @@ const SkillsModal = ({ formData, setFormData }: EditSkillsFormProps) => {
     <div className="flex flex-col gap-2">
       <h5 className="">Select Your Skills:</h5>
 
-      {/* Skill checkboxes */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {availableSkills.map((skill) => (
           <label key={skill} className="flex items-center gap-2 cursor-pointer">
@@ -84,7 +88,6 @@ const SkillsModal = ({ formData, setFormData }: EditSkillsFormProps) => {
         ))}
       </div>
 
-      {/* Add custom skill */}
       <div className="flex gap-2 my-4">
         <input
           type="text"
@@ -101,9 +104,8 @@ const SkillsModal = ({ formData, setFormData }: EditSkillsFormProps) => {
         </button>
       </div>
 
-      {/* Selected skills preview */}
       {formData?.skills.length ? (
-        <div className="">
+        <div>
           <h5>Selected Skills:</h5>
           <div className="flex flex-wrap gap-3 pt-2">
             {formData.skills.map((skill) => (

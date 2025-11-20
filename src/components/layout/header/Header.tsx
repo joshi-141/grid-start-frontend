@@ -29,7 +29,7 @@ const Header = ({ className }: HeaderProps) => {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Post a Service", href: "/post-service" },
+    { label: "Post a Service", href: "/post-a-service" },
   ];
 
   // Helper to check if current URL matches

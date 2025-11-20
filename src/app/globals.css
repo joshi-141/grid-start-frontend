@@ -38,7 +38,8 @@ p {
   line-height: 25px;
 }
 
-a{text-decoration: none;}
+a{text-decoration: none; color: #000;}
+a:hover{color: #19a463;}
 
 button {
   font-family: var(--font-gordita), sans-serif;
